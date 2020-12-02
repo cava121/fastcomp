@@ -1,8 +1,18 @@
 @import "variable.scss"; 
 
+// html, body {
+//     /* Убирает прокрутку по горизонтале, для мобильной версии */
+//     overflow-x: hidden;
+// }
+
 body {
     padding: 0;
     margin: 0;
+    background: #f7f7f7;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 p, .row, .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
@@ -68,5 +78,288 @@ p, .row, .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5
                 }
             }
         }
+    }
+}
+
+.label {
+    margin: 4rem 0rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.conditions {
+    &__right {
+        background-color: red;
+        img {
+            width: 100%;
+        }
+    }
+    &__get_sales {
+        color: white;
+        background-color: $red_project;
+        padding: 10px 20px;
+        transition: all 0.7s ease-out;
+        &:hover {
+            color: white;
+            transition: all 0.7s ease-out;
+            box-shadow: 0 0 15px $light_red_project;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 17px;
+        background-color: #dc3545;
+        width: 90%;
+        color: white;
+        padding: 5px 10px;
+    }
+}
+
+.work {
+    &__item {
+        padding: 5px;
+        img {
+            max-width: 350px;
+            height: 200px;
+            margin-bottom: 1rem;
+        }
+    }
+    .item {
+        &__wrapper {
+            background-color: black;
+            padding: 2rem 0px;
+            margin-bottom: 2rem;
+        }
+        &__text {
+            color: white;
+            font-size: 17px;
+        }
+    }
+}
+
+.problem {
+    &__items {
+        margin: 3rem 0rem;
+        
+    }
+    &__item {
+        display: flex;
+        background: #dc3545;
+        color: white !important;
+        font-size: 22px;
+        justify-content: space-between;
+        padding: 5px 40px;
+        margin-bottom: 10px;
+        &:hover {
+            box-shadow: 0 0 10px #dc3545;
+            cursor: pointer;
+        }
+        a {
+            color: white;
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+
+    &__price {
+        position: absolute;
+        right: 30%;
+    }
+}
+
+.sales {
+    color: white;
+    background-color: $red_project;
+    padding: 20px 100px;
+    transition: all .7s ease-out;
+    border-radius: 20px;
+        &:hover {
+            color: white;
+            transition: all 0.7s ease-out;
+            box-shadow: 0 0 30px $light_red_project;
+        }
+}
+
+.modal {
+    top: 40%;
+}
+
+.modal-content {
+    border-radius: 1rem ;
+}
+
+.modal-dialog {
+    max-width: 800px;
+}
+
+.modal-title {
+    text-align: center;
+    width: 100%;
+}
+
+input {
+    background: transparent;
+    border-radius: 5px;
+    color: #000;
+    padding: 12px 20px 10px 20px;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-size: 20px;
+    background: transparent; 
+    color: #000;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border: 1.5px solid $red_project;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: space-around;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+input:focus {
+    border: 1.5px solid black;
+}
+
+.modal__send {
+    color: #fff;
+    background-color: #dc3545;
+    transition: all .7s ease-out;
+    border-radius: 10px;
+    padding: 10px 40px;
+    &:hover {
+        color: white;
+        transition: all 0.7s ease-out;
+        box-shadow: 0 0 10px $light_red_project;
+    }
+}
+
+.modal__send-wrapper {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.navbar-dark {
+    display: none;
+}
+
+// мобильное меню
+.navbar-toggler {
+    width: 100%;
+    text-align: right;
+    border: none;
+}
+
+.nav__mobile {
+    ul {
+        li {
+            width: 100%;
+            a {
+                font-size: 17px;
+                color: white;
+            }
+        }
+    }
+}
+
+// css для мобильной версии
+@media screen and (max-width: 600px) {
+    .navbar-dark {
+        display: block;
+    }
+    .label {
+        h1 {
+            font-size: 30px;
+        }
+    }
+    .header_nav {
+        display: none;
+    }
+    .header_row-color {
+        display: none !important;
+    }
+    .header__help {
+        display: none;
+    }
+    .header__remont {
+        display: none;
+    }
+    .header_row {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px 0px;
+        margin: 0;
+    }
+    .header__text {
+        display: none;
+    }
+    .problem_text {
+      max-width: 70%;
+    }
+    .problem__item {
+        padding: 5px 10px;
+        align-items: center;
+    }
+    .modal-body {
+        display: block;
+        input {
+            width: 100%;
+        }
+    }
+    .conditions__right {
+        display: none;
+    }
+    .conditions-wrapper {
+        text-align: center;
+    }
+    .conditions__item {
+        width: 100%;
+    }
+    .conditions__item {
+        font-size: 18px;
+    }
+    .order {
+        display: none;
+    }
+    .problem__price {
+        right: 5%;
+    }
+    .sales {
+        padding: 20px 40px;
+    }
+    .modal {
+        top: 20%;
+    }
+  }
+
+@media screen and (max-width: 320px) {
+    .problem_text {
+        max-width: 65%;
+      }
+    .order {
+        display: none;
+    }
+    .problem__price {
+        right: 5%;
+    }
+    .sales {
+        padding: 10px 15px;
+    }
+    
+    footer .header_phone {
+        width: 100%;
+        text-align: right;
+        display: block;
     }
 }

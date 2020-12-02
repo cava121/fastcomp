@@ -2,54 +2,300 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" href="all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-      
-    </div>
-      <header id="header" class="header">
+   
+    
+    <header id="header" class="header">
           <div class="row dflex header_row container justify-content-between">
               <div class="p2 header_logo">
                   FastComp
               </div>
               <div class="p2 header_text">
-                  <p>Компьютерная помощь в воронеже</p>
-                  <p>Ремонт компьютеров на дому</p>
+                  <p class="header__help">Компьютерная помощь</p>
+                  <p class="header__remont">Ремонт компьютеров на дому</p>
               </div>
               <div class="p2 header_phone">
-                <i class="fas fa-phone-alt header_icon_phone"></i>
                 <div class="header_info_phone">
                   <p class="header_number_phone text-right">
+                    <i class="fas fa-phone-alt" style="transform: rotate(10deg);"></i>
                     <a href="tel:799999">+79999999</a>
                   </p>
-                  <p class="header_text">Звоните в любое время</p>
+                  <p class="header_text header__text">Звоните в любое время</p>
                 </div>
               </div>
           </div>
+           <!-- мобильное меню -->
+          <div class="pos-f-t">
+            <nav class="navbar navbar-dark bg-dark">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+            <div class="collapse nav__mobile" id="navbarToggleExternalContent">
+              <div class="bg-dark p-4">
+                <ul class="nav  container">
+                  <li class="nav-item">
+                    <a class="nav_item-link" href="#conditions">О нас</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav_item-link" href="#work">Почему мы</a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="nav_item-link" href="#">Скидка 25%</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav_item-link" href="#problem">Услуги</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav_item-link" href="tel:7999">Позвонить</a>
+                  </li>
+              </ul>
+              </div>
+            </div>
+          </div>
+          <!-- конец мобильного меню -->
           <div class="row header_row header_row-color">
             <ul class="nav header_nav container">
+                <li class="nav-item">
+                  <a class="nav_item-link" href="#conditions">О нас</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav_item-link" href="#work">Почему мы</a>
+                </li>
+                <li class="nav-item">
+                  <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="nav_item-link" href="#">Скидка 25%</a>
+                </li>
                 <li class="nav_item">
-                  <a class="nav_item-link" href="#">Услуги</a>
+                  <a class="nav_item-link" href="#problem">Услуги</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav_item-link" href="#">О нас</a>
+                  <a class="nav_item-link" href="tel:7999">Позвонить</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav_item-link" href="#">Скидка 25%</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav_item-link" href="#">Почему мы</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav_item-link" href="#">Позвонить</a>
-                </li>
-              </ul>
+            </ul>
         </div>
       </header>
+      <div class="container">
+        <section id="conditions" class="conditions">
+          <div class="row">
+            <div class="col-12 label text-center label">
+              <h1>Срочная Компьютерная помощь в вашем городе</h1> 
+            </div>
+          </div>
+          <div class="row " style="align-items: center;">
+            <div class="col-md-6 col-sm-12 conditions-wrapper">
+              <div class="conditions__if">
+                <div class="conditions__item">
+                  <i class="fas fa-car" style="margin-right: 5px;"></i>
+                  <p>Бесплатный выезд мастера и диагностика</p>
+                </div>
+                <div class="conditions__item">
+                  <i class="fas fa-tools" style="margin-right: 5px;"></i>
+                  <p>Выполняем ремонт любой сложности</p>
+                </div>
+                <div class="conditions__item">
+                  <i class="fas fa-user-friends" style="margin-right: 5px;"></i>
+                  <p>Индивидуальный подход и бережное отношение с техникой</p>
+                </div>
+                <div class="conditions__item">
+                  <i class="fas fa-check" style="margin-right: 5px;"></i>
+                  <p>Гарантия от 1года на все наши услуги</p>
+                </div>
+                <div class="conditions__item">
+                  <i class="fas fa-percent" style="margin-right: 5px;"></i>
+                  <p>Скидки многодетным семьям, пенсионерам, ветеранам ВОВ</p>
+                </div>
+              </div>
+              <h3 style="margin-top: 3rem;">Заполните форму и получите скидку 25%</h3>
+              <div class="conditions__sales  text-center" style="margin-top: 2rem;">
+                <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="conditions__get_sales sales">Получить скидку</a>
+              </div>
+            </div>
+            <div class="col-6 conditions__right">
+              <img src="img/help.jpg" alt="Компьютерная помощь">
+            </div>
+          </div>
+        </section>
+        <section id="work" class="work">
+          <div class="row">
+            <div class="col-12 text-center label">
+              <h1>Как мы работаем?</h1> 
+            </div>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-md-5">
+              <div class="work__elements">
+                <div class="work__item item">
+                  <div class="item__text item__wrapper text-center">
+                    <img src="img/call_master.jpg" alt="вызов мастера">
+                    <p>Вызываете мастера</p>
+                    <p>(приедет в течении часа или в удобное для вас время)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-1">
+            </div>
+            <div class="col-md-5">
+              <div class="work__elements">
+                <div class="work__item item">
+                  <div class="item__text item__wrapper text-center">
+                    <img src="img/diagnostik.jpg" alt="вызов мастера">
+                    <p>Мастер проводит бесплатную диагностику, выясняет причину поломки и озвучивает цену ремонта</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="work__elements">
+                <div class="work__item item">
+                  <div class="item__text item__wrapper text-center">
+                    <img src="img/work.jpg" alt="вызов мастера">
+                    <p>Если вас устраивает, мастер выполняет ремонт</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-1">
+            </div>
+            <div class="col-md-5">
+              <div class="work__elements">
+                <div class="work__item item">
+                  <div class="item__text item__wrapper text-center">
+                    <img src="img/pay.jpg" alt="вызов мастера">
+                    <p>Вы принимаете и оплачиваете работу</p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="problem" class="problem">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h1>Частые проблемы с компьютером</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="problem__items">
+                <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="problem__item">
+                  <p class="problem_text">Компьютер виснет и не загружается</p>
+                  <p class="problem__price">от 599 <i class="fas fa-ruble-sign" style="font-weight: 550;font-size: 20px;"></i></p>
+                  <p class="order" href="#">Заказать</p>
+                </a>
+                <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="problem__item">
+                  <p class="problem_text">Проблемы с вирусами?</p>
+                  <p class="problem__price">от 499 <i class="fas fa-ruble-sign" style="font-weight: 550;font-size: 20px;"></i></p>
+                  <p class="order" href="#">Заказать</p>
+                </a>
+                <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="problem__item">
+                  <p class="problem_text">Не работает интернет или WI-FI?</p>
+                  <p class="problem__price">от 599 <i class="fas fa-ruble-sign" style="font-weight: 550;font-size: 20px;"></i></p>
+                  <p class="order" href="#">Заказать</p>
+                </a>
+                <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="problem__item">
+                  <p class="problem_text">Нужно установить лицензионную программу?</p>
+                  <p class="problem__price">от 599 <i class="fas fa-ruble-sign" style="font-weight: 550;font-size: 20px;"></i></p>
+                  <p class="order" href="#">Заказать</p>
+                </a>
+                <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="problem__item">
+                  <p class="problem_text">Замена термопасты</p>
+                  <p class="problem__price">от 499 <i class="fas fa-ruble-sign" style="font-weight: 550;font-size: 20px;"></i></p>
+                  <p class="order" href="#">Заказать</p>
+                </a>
+                <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="problem__item">
+                  <p class="problem_text">Шумит и греется компьютер?</p>
+                  <p class="problem__price">от 799 <i class="fas fa-ruble-sign" style="font-weight: 550;font-size: 20px;"></i></p>
+                  <p class="order" href="#">Заказать</p>
+                </a>
+                <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="problem__item">
+                  <p class="problem_text">Не корректная работа видеокарты</p>
+                  <p class="problem__price">от 299 <i class="fas fa-ruble-sign" style="font-weight: 550;font-size: 20px;"></i></p>
+                  <p class="order" href="#">Заказать</p>
+                </a>
+                <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="problem__item">
+                  <p class="problem_text">Программы для работы и учебы</p>
+                  <p class="problem__price">от 899 <i class="fas fa-ruble-sign" style="font-weight: 550;font-size: 20px;"></i></p>
+                  <p class="order" href="#">Заказать</p>
+                </a>
+                <a data-toggle="modal" data-target="#exampleModal" href="javascript:void(0);" class="problem__item">
+                  <p class="problem_text">Замена комплектующих</p>
+                  <p class="problem__price">от 499 <i class="fas fa-ruble-sign" style="font-weight: 550;font-size: 20px;"></i></p>
+                  <p class="order" href="#">Заказать</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="row">
+            <div class="col-12 text-center">
+              <h1>Столкнулись с такой проблемой? Мы знаем как ее решить</h1>
+            </div>
+          </div>
+          <div class="row text-center" style="margin: 3rem 0rem;">
+            <div class="col-12">
+              <a href="javascript:void(0);" data-toggle="modal" data-target="#exampleModal" class="sales">Вызвать мастера</a>
+            </div>
+          </div>
+          <div class="row text-center" style="margin: 3rem 0rem;">
+            <div class="col-12">
+              <h1>Хотите получить бесплатную консультацию? Оставьте номер и оператор свяжется с вами в течении 5мин</h1>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-12">
+              <a href="javascript:void(0);" class="sales"  data-toggle="modal" data-target="#exampleModal">Заказать звонок</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer style="background: #dc3545;margin-top: 5rem;padding: 10px 0px;">
+        <div class="row dflex container justify-content-between">
+          <div class="p2 header_logo" style="color: white;">
+              FastComp
+          </div>
+          <div class="p2 header_text">
+            <p class="header_text" style="color: white;">Звоните в любое время</p>
+          </div>
+          <div class="p2 header_phone">
+            <div class="header_info_phone">
+              <p class="header_number_phone text-right">
+                <a href="tel:799999" style="color: white;">+79999999</a>
+              </p>
+            </div>
+          </div>
+      </footer>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel">Заполните форму и менеджер свяжется с Вами</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="text" placeholder="Ваше имя">
+              <input type="text" placeholder="Ваш телефон">
+            </div>
+            <div class="modal__send-wrapper">
+              <a class="modal__send" href="">Отправить заявку</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="jquery-3.5.1.min.js"></script>
+      <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
